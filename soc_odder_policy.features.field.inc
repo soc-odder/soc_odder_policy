@@ -253,6 +253,7 @@ function soc_odder_policy_field_default_fields() {
           'allowed_formats' => array(
             'filtered_html' => 'filtered_html',
             'plain_text' => 'plain_text',
+            'wysiwyg' => 0,
           ),
           'allowed_formats_toggle' => 0,
           'default_order_toggle' => 0,
@@ -263,6 +264,9 @@ function soc_odder_policy_field_default_fields() {
               ),
               'plain_text' => array(
                 'weight' => '10',
+              ),
+              'wysiwyg' => array(
+                'weight' => '0',
               ),
             ),
           ),
@@ -341,10 +345,11 @@ function soc_odder_policy_field_default_fields() {
       'settings' => array(
         'better_formats' => array(
           'allowed_formats' => array(
-            'filtered_html' => 'filtered_html',
-            'plain_text' => 'plain_text',
+            'filtered_html' => 0,
+            'plain_text' => 0,
+            'wysiwyg' => 'wysiwyg',
           ),
-          'allowed_formats_toggle' => 0,
+          'allowed_formats_toggle' => 1,
           'default_order_toggle' => 0,
           'default_order_wrapper' => array(
             'formats' => array(
@@ -354,6 +359,9 @@ function soc_odder_policy_field_default_fields() {
               'plain_text' => array(
                 'weight' => '10',
               ),
+              'wysiwyg' => array(
+                'weight' => '0',
+              ),
             ),
           ),
         ),
@@ -361,7 +369,7 @@ function soc_odder_policy_field_default_fields() {
           'enable' => 0,
           'insert_plugin' => '',
         ),
-        'text_processing' => '0',
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(

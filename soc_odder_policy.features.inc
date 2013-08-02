@@ -18,7 +18,7 @@ function soc_odder_policy_ctools_plugin_api() {
  * Implements hook_views_api().
  */
 function soc_odder_policy_views_api() {
-  return array("version" => "3.0");
+  return array("api" => "3.0");
 }
 
 /**

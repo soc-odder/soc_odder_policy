@@ -21,7 +21,7 @@ function soc_odder_policy_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_soc_odder_policy';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['comment_default_mode_soc_odder_policy'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -42,7 +42,7 @@ function soc_odder_policy_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_soc_odder_policy';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['comment_preview_soc_odder_policy'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -56,7 +56,7 @@ function soc_odder_policy_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_subject_field_soc_odder_policy';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['comment_subject_field_soc_odder_policy'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -77,20 +77,32 @@ function soc_odder_policy_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '6',
+          'weight' => '9',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '10',
         ),
         'redirect' => array(
-          'weight' => '8',
+          'weight' => '11',
         ),
       ),
       'display' => array(),
@@ -125,6 +137,7 @@ function soc_odder_policy_strongarm() {
   $strongarm->name = 'node_options_soc_odder_policy';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'revision',
   );
   $export['node_options_soc_odder_policy'] = $strongarm;
 
@@ -132,7 +145,7 @@ function soc_odder_policy_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_soc_odder_policy';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['node_preview_soc_odder_policy'] = $strongarm;
 
   $strongarm = new stdClass();
